@@ -1,0 +1,38 @@
+include: Objects/**/*.ts2
+include: ContentTypes/**/*.ts2
+include: DocumentTypes/**/*.ts2
+
+# Dmitri Pisarev: "Copy-paste is much better than DRY in a lot of cases...
+#                  Bad abstraction is much worse than no abstraction."
+# @see https://twitter.com/dimaip/status/768738351465758720
+
+# David Wheeler: "Any problem in computer science can be solved with another layer of indirection.
+#                 But that usually will create another problem."
+# @see https://de.wikipedia.org/wiki/David_Wheeler
+
+prototype(WebExcess.BaseTypes:Content) >
+prototype(WebExcess.BaseTypes:Content) < prototype(TYPO3.TypoScript:Tag) {
+	tagName = 'div'
+
+	isLive = ${node.context.live}
+	@context.isLive = ${this.isLive}
+
+	attributes {
+		class = TYPO3.TypoScript:RawArray {
+			nodeTypeName = ${q(node).property('_nodeType.name')}
+			nodeTypeName.@process.10 = ${String.replace(value, 'WebExcess.BaseTypes:', 'basetype-')}
+			nodeTypeName.@process.20 = ${String.pregReplace(value, '/[[:^alnum:]]/', '-')}
+			nodeTypeName.@process.30 = ${String.toLowerCase(value)}
+		}
+	}
+
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+}
+
+root {
+	// Override the default root matcher to render document nodes with a prototype of the same name
+	default {
+		type = ${q(node).property('_nodeType') + '.Document'}
+		renderPath >
+	}
+}

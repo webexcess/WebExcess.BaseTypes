@@ -1,0 +1,19 @@
+# basetype-image
+
+prototype(WebExcess.BaseTypes:ImageSVG) >
+prototype(WebExcess.BaseTypes:ImageSVG) < prototype(WebExcess.BaseTypes:Image) {
+
+	explicitWidth = ${q(node).property('explicitWidth')}
+	@context.explicitWidth = ${this.explicitWidth}
+
+	explicitWidthUnit = ${q(node).property('explicitWidthUnit')}
+	@context.explicitWidthUnit = ${this.explicitWidthUnit}
+
+	content {
+		image {
+			attributes {
+				style = ${'width: ' + explicitWidth + explicitWidthUnit}
+			}
+		}
+	}
+}

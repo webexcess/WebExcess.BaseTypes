@@ -1,0 +1,83 @@
+# basetype-iframe
+
+'WebExcess.BaseTypes:Iframe.ui':
+  abstract: true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Iframe:ui.label'
+    group: 'basetypes'
+    position: 50
+    inspector:
+      groups:
+        iframe:
+          label: 'WebExcess.BaseTypes:NodeTypes.Iframe:groups.button'
+          tab: default
+
+'WebExcess.BaseTypes:Iframe.properties.iframeUrl':
+  abstract: true
+  properties:
+    iframeUrl:
+      type: string
+      defaultValue: ''
+
+'WebExcess.BaseTypes:Iframe.properties.iframeUrl--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Iframe.properties.iframeUrl': true
+  properties:
+    iframeUrl:
+      type: string
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Iframe:properties.iframeUrl'
+        reloadIfChanged: true
+        inspector:
+          group: 'iframe'
+          position: 10
+          editor: 'TYPO3.Neos/Inspector/Editors/LinkEditor'
+
+'WebExcess.BaseTypes:Iframe.properties.iframeRatioX':
+  abstract: true
+  properties:
+    iframeRatioX:
+      type: integer
+      defaultValue: '4'
+      validation:
+        'TYPO3.Neos/Validation/IntegerValidator':
+          minimum: 1
+
+'WebExcess.BaseTypes:Iframe.properties.iframeRatioX--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Iframe.properties.iframeRatioX': true
+  properties:
+    iframeRatioX:
+      type: integer
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Iframe:properties.iframeRatioX'
+        reloadIfChanged: true
+        inspector:
+          group: 'iframe'
+          position: 20
+
+'WebExcess.BaseTypes:Iframe.properties.iframeRatioY':
+  abstract: true
+  properties:
+    iframeRatioY:
+      type: integer
+      defaultValue: '3'
+      validation:
+        'TYPO3.Neos/Validation/IntegerValidator':
+          minimum: 1
+
+'WebExcess.BaseTypes:Iframe.properties.iframeRatioY--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Iframe.properties.iframeRatioY': true
+  properties:
+    iframeRatioY:
+      type: integer
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Iframe:properties.iframeRatioY'
+        reloadIfChanged: true
+        inspector:
+          group: 'iframe'
+          position: 30

@@ -1,0 +1,6 @@
+# basetype-heading
+
+prototype(WebExcess.BaseTypes:Heading) >
+prototype(WebExcess.BaseTypes:Heading) < prototype(WebExcess.BaseTypes:Content) {
+	content = WebExcess.BaseTypes:HeadingObject
+}

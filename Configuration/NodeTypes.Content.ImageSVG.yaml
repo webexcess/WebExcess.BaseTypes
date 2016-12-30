@@ -1,0 +1,40 @@
+# basetype-image
+
+'WebExcess.BaseTypes:ImageSVG':
+  superTypes:
+    'WebExcess.BaseTypes:Image': true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.ImageSVG:ui.label'
+    icon: icon-object-group
+    inspector:
+      groups:
+        imageSvg:
+          label: 'WebExcess.BaseTypes:NodeTypes.ImageSVG:groups.imageSvg'
+          icon: icon-object-group
+          tab: default
+  properties:
+    explicitWidth:
+      type: string
+      defaultValue: '25'
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.ImageSVG:properties.explicitWidth'
+        reloadIfChanged: true
+        inspector:
+          group: 'imageSvg'
+          editor: 'TYPO3.Neos/Inspector/Editors/TextFieldEditor'
+    explicitWidthUnit:
+      type: string
+      defaultValue: '%'
+      ui:
+        inlineEditable: false
+        label: 'WebExcess.BaseTypes:NodeTypes.ImageSVG:properties.explicitWidthUnit'
+        reloadIfChanged: true
+        inspector:
+          group: 'imageSvg'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '%':
+                label: '%'
+              'px':
+                label: 'px'

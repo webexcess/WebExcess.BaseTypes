@@ -1,0 +1,107 @@
+# basetype-button
+
+'WebExcess.BaseTypes:Button.ui':
+  abstract: true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Button:ui.label'
+    group: 'basetypes'
+    icon: icon-link
+    position: 30
+    inspector:
+      groups:
+        button:
+          label: 'WebExcess.BaseTypes:NodeTypes.Button:groups.button'
+          icon: icon-link
+          tab: default
+
+'WebExcess.BaseTypes:Button.properties.buttonUrl':
+  abstract: true
+  properties:
+    buttonUrl:
+      type: string
+      defaultValue: ''
+
+'WebExcess.BaseTypes:Button.properties.buttonUrl--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Button.properties.buttonUrl': true
+  properties:
+    buttonUrl:
+      type: string
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Button:properties.buttonUrl'
+        reloadIfChanged: true
+        inspector:
+          group: 'button'
+          editor: 'TYPO3.Neos/Inspector/Editors/LinkEditor'
+
+'WebExcess.BaseTypes:Button.properties.buttonStyle':
+  abstract: true
+  properties:
+    buttonStyle:
+      type: string
+      defaultValue: 'link'
+
+'WebExcess.BaseTypes:Button.properties.buttonStyle--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Button.properties.buttonStyle': true
+  properties:
+    buttonStyle:
+      defaultValue: 'btn-default'
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Button:properties.buttonStyle'
+        reloadIfChanged: true
+        inspector:
+          group: 'button'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'btn-default':
+                label: 'WebExcess.BaseTypes:NodeTypes.Button:properties.buttonStyle.default'
+              'btn-primary':
+                label: 'WebExcess.BaseTypes:NodeTypes.Button:properties.buttonStyle.primary'
+              'btn-link':
+                label: 'WebExcess.BaseTypes:NodeTypes.Button:properties.buttonStyle.link'
+
+#'WebExcess.BaseTypes:Button.properties.buttonStyle--inplace':
+#  abstract: true
+
+'WebExcess.BaseTypes:Button.properties.buttonText':
+  abstract: true
+  properties:
+    buttonText:
+      type: string
+
+'WebExcess.BaseTypes:Button.properties.buttonText--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Button.properties.buttonText': true
+  properties:
+    'buttonText':
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Button:properties.buttonText'
+        reloadIfChanged: true
+        inspector:
+          group: 'button'
+          editor: 'TYPO3.Neos/Inspector/Editors/TextFieldEditor'
+
+'WebExcess.BaseTypes:Button.properties.buttonText--inplace':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Button.properties.buttonText': true
+  properties:
+    'buttonText':
+      ui:
+        inlineEditable: true
+        aloha:
+          'format': []
+          'table': []
+          'link': []
+          'list': []
+          'alignment': []
+          'formatlesspaste':
+            'button': false
+            'formatlessPasteOption': true
+            'strippedElements': ['a', 'br']
+            'autoparagraph': false

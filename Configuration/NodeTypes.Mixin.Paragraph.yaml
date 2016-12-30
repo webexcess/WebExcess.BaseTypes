@@ -1,0 +1,89 @@
+# basetype-paragraph
+
+'WebExcess.BaseTypes:Paragraph.ui':
+  abstract: true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Paragraph:ui.label'
+    group: 'basetypes'
+    icon: icon-file-text-o
+    position: 20
+    inspector:
+      groups:
+        paragraph:
+          label: 'WebExcess.BaseTypes:NodeTypes.Paragraph:groups.paragraph'
+          icon: icon-file-text-o
+          tab: default
+
+'WebExcess.BaseTypes:Paragraph.properties.paragraphText':
+  abstract: true
+  properties:
+    paragraphText:
+      type: string
+      ui:
+        inlineEditable: false
+        inspector:
+          group: hidden
+
+'WebExcess.BaseTypes:Paragraph.properties.paragraphText--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Paragraph.properties.paragraphText': true
+  properties:
+    'paragraphText':
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Paragraph:properties.paragraphText'
+        reloadIfChanged: true
+        inspector:
+          group: 'paragraph'
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          editorOptions:
+            rows: 7
+
+'WebExcess.BaseTypes:Paragraph.properties.paragraphText--inplace':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Paragraph.properties.paragraphText': true
+  properties:
+    'paragraphText':
+      ui:
+        inlineEditable: true
+        aloha:
+          'format': # Enable specific formatting options.
+            'strong': true
+            'b': false
+            'em': true
+            'i': false
+            'u': true
+            'sub': true
+            'sup': true
+            'p': true
+            'h1': false
+            'h2': false
+            'h3': false
+            'h4': false
+            'h5': false
+            'h6': false
+            'code': false
+            'removeFormat': true
+          'table':
+            'table': false
+          'link':
+            'a': true
+          'list':
+            'ul': true
+            'ol': true
+          'alignment':
+            'left': true
+            'center': true
+            'right': true
+            'justify': true
+          'formatlesspaste':
+            # Show toggle button for formatless pasting.
+            'button': true
+            # Whether the formatless pasting should be enable by default.
+            'formatlessPasteOption': false
+            # If not set the default setting is used: 'a', 'abbr', 'b', 'bdi', 'bdo', 'cite', 'code', 'del', 'dfn',
+            # 'em', 'i', 'ins', 'kbd', 'mark', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'small', 'strong', 'sub', 'sup',
+            # 'time', 'u', 'var'
+            'strippedElements': ['a']
+          'autoparagraph': true # Automatically wrap non-wrapped text blocks in paragraph blocks.

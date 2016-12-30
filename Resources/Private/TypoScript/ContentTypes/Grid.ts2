@@ -1,0 +1,10 @@
+# basetype-grid
+
+prototype(WebExcess.BaseTypes:2Grid) >
+prototype(WebExcess.BaseTypes:2Grid) < prototype(WebExcess.BaseTypes:GridObject)
+
+prototype(WebExcess.BaseTypes:3Grid) >
+prototype(WebExcess.BaseTypes:3Grid) < prototype(WebExcess.BaseTypes:GridObject)
+
+prototype(WebExcess.BaseTypes:4Grid) >
+prototype(WebExcess.BaseTypes:4Grid) < prototype(WebExcess.BaseTypes:GridObject)

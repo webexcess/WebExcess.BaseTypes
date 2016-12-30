@@ -1,0 +1,54 @@
+prototype(WebExcess.BaseTypes:PageObject) >
+prototype(WebExcess.BaseTypes:PageObject) < prototype(TYPO3.Neos:Page) {
+
+	head {
+		mobileMetaTags = '<meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1">'
+		stylesheets {
+			# customCss = 'custom.css'
+		}
+		javascripts {
+			# customJs = 'custom.js'
+		}
+	}
+
+	bodyTag.attributes.class = TYPO3.TypoScript:Array {
+		# customClass = "custom-class"
+	}
+
+	body = WebExcess.BaseTypes:PageObject.Body
+
+}
+
+prototype(WebExcess.BaseTypes:PageObject.Body) >
+prototype(WebExcess.BaseTypes:PageObject.Body) < prototype(TYPO3.TypoScript:Template) {
+	@position = 'after bodyTag'
+	node = ${node}
+	site = ${site}
+
+	templatePath = 'resource://WebExcess.BaseTypes/Private/Templates/Documents/Default.html'
+	partialRootPath = 'resource://WebExcess.BaseTypes/Private/Templates/Partials'
+	layoutRootPath = 'resource://WebExcess.BaseTypes/Private/Templates/Layouts'
+
+	layoutName = ${layoutName ? layoutName : 'Page'}
+
+	content {
+		main = TYPO3.Neos:PrimaryContent {
+			nodePath = 'main'
+		}
+	}
+
+	parts {
+		header = '<p>Header content..</p>'
+		footer = '<p>Footer content..</p>'
+	}
+
+	# Script includes before the closing body tag should go here
+	javascripts = TYPO3.TypoScript:Array{
+		# customJs = 'custom.js'
+	}
+
+	@process.networkteamNeosMailObfuscator = Networkteam.Neos:MailObfuscator
+
+	# This processor appends the rendered javascripts Array to the rendered template
+	@process.appendJavaScripts = ${value + this.javascripts}
+}

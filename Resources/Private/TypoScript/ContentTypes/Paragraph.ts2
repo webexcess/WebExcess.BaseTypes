@@ -1,0 +1,6 @@
+# basetype-paragraph
+
+prototype(WebExcess.BaseTypes:Paragraph) >
+prototype(WebExcess.BaseTypes:Paragraph) < prototype(WebExcess.BaseTypes:Content) {
+	content = WebExcess.BaseTypes:ParagraphObject
+}

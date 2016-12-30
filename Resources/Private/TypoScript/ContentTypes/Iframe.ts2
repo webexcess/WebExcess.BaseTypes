@@ -1,0 +1,23 @@
+# basetype-button
+
+prototype(WebExcess.BaseTypes:Iframe) >
+prototype(WebExcess.BaseTypes:Iframe) < prototype(WebExcess.BaseTypes:Content) {
+
+	iframeRatioX = ${q(node).property('iframeRatioX')}
+	iframeRatioY = ${q(node).property('iframeRatioY')}
+	ratio = ${100 / this.iframeRatioX * this.iframeRatioY}
+	@context.ratio = ${this.ratio}
+
+	content = TYPO3.TypoScript:Tag {
+		tagName = 'iframe'
+		attributes {
+			src = ${q(node).property('iframeUrl')}
+			frameBorder = '0'
+			allowFullScreen = ${true}
+			style = '  position: absolute; top: 0; left: 0; width: 100%; height: 100%;'
+		}
+		@process.wrap = ${'<div class="embed-container" style="padding-bottom: ' + ratio + '%; position: relative; height: 0; overflow: hidden; width: 100%; height: auto;">' + value + '</div>'}
+	}
+	@process.convertUris = TYPO3.Neos:ConvertUris
+
+}

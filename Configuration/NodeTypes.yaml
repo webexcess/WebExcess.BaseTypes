@@ -1,0 +1,55 @@
+# basetype-reset
+
+'TYPO3.Neos.NodeTypes:Page':
+  abstract: true
+'TYPO3.Neos.NodeTypes:Headline':
+  abstract: TRUE
+'TYPO3.Neos.NodeTypes:Text':
+  abstract: TRUE
+'TYPO3.Neos.NodeTypes:Image':
+  abstract: TRUE
+'TYPO3.Neos.NodeTypes:TextWithImage':
+  abstract: TRUE
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  abstract: TRUE
+'TYPO3.Neos.NodeTypes:ThreeColumn':
+  abstract: TRUE
+'TYPO3.Neos.NodeTypes:FourColumn':
+  abstract: TRUE
+
+#'TYPO3.Neos.NodeTypes:Html':
+#  abstract: TRUE
+#'TYPO3.Neos.NodeTypes:Form':
+#  abstract: TRUE
+#'TYPO3.Neos.NodeTypes:AssetList':
+#  abstract: TRUE
+#'TYPO3.Neos.NodeTypes:ContentReferences':
+#  abstract: TRUE
+#'Flowpack.Listable:ListNode':
+#  abstract: TRUE
+#'TYPO3.Neos.NodeTypes:Menu':
+#  abstract: TRUE
+#'TYPO3.Neos:PluginView':
+#  abstract: TRUE
+
+
+# basetype-default
+
+'WebExcess.BaseTypes:Content':
+  abstract: true
+  label: "${String.replace(node.nodeType.name, 'WebExcess.BaseTypes:', '')}"
+  superTypes:
+    'TYPO3.Neos:Content': true
+
+'WebExcess.BaseTypes:Document':
+  abstract: true
+  superTypes:
+    'TYPO3.Neos:Document': true
+  ui:
+    label: 'Document'
+    icon: 'icon-file'
+  constraints:
+    nodeTypes:
+      'WebExcess.BaseTypes:Document': true
+      'TYPO3.Neos:Shortcut': true
+      'WebExcess.BaseTypes:Home': false

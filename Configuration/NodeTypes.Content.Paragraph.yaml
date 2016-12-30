@@ -1,0 +1,12 @@
+# basetype-paragraph
+
+'WebExcess.BaseTypes:Paragraph':
+  superTypes:
+    'WebExcess.BaseTypes:Content': true
+    'WebExcess.BaseTypes:Paragraph.ui': true
+    'WebExcess.BaseTypes:Paragraph.properties.paragraphText--inplace': true
+  properties:
+    'paragraphText':
+      ui:
+        aloha:
+          placeholder: 'WebExcess.BaseTypes:NodeTypes.Global:lorem.100'

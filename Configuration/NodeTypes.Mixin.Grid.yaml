@@ -1,0 +1,44 @@
+# basetype-grid
+
+'WebExcess.BaseTypes:Grid.ui':
+  abstract: true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Grid:ui.label'
+    group: 'structure'
+    icon: 'icon-columns'
+    inspector:
+      groups:
+        grid:
+          label: 'WebExcess.BaseTypes:NodeTypes.Grid:groups.grid'
+          icon: 'icon-columns'
+
+'WebExcess.BaseTypes:Grid.properties.gridLayout':
+  abstract: true
+  properties:
+    gridLayout:
+      type: string
+      defaultValue: '12'
+      ui:
+        inlineEditable: false
+        inspector:
+          group: hidden
+
+'WebExcess.BaseTypes:Grid.properties.gridLayout--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Grid.properties.gridLayout': true
+  properties:
+    'gridLayout':
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Grid:properties.gridLayout'
+        reloadIfChanged: true
+        inspector:
+          group: 'grid'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '12':
+                label: '100%'
+
+#'WebExcess.BaseTypes:Grid.properties.gridLayout--inplace':
+#  abstract: true

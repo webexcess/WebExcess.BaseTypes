@@ -1,0 +1,8 @@
+'WebExcess.BaseTypes:Page':
+  superTypes:
+    'WebExcess.BaseTypes:Document': true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Page:ui.label'
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'

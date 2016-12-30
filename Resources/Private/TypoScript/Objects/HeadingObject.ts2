@@ -1,0 +1,13 @@
+# basetype-heading
+
+prototype(WebExcess.BaseTypes:HeadingObject) >
+prototype(WebExcess.BaseTypes:HeadingObject) < prototype(TYPO3.TypoScript:Tag) {
+		tagName = ${q(node).property('headingTagName')}
+		tagName.@process.10 = ${value == 'auto' ? ( q(documentNode).find('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof WebExcess.BaseTypes:Heading][headingTagName = "h1"]').count() == 0 && q(documentNode).find('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof WebExcess.BaseTypes:Heading][headingTagName = "auto"]').count() > 0 && q(documentNode).find('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof WebExcess.BaseTypes:Heading][headingTagName = "auto"]').sortRecursiveByIndex('ASC').first().property('_identifier') == q(node).property('_identifier') ? 'h1' : 'h2' ) : value }
+
+		content = ${q(node).property('headingText')}
+		content.@process.10 = ${String.stripTags(value)}
+
+		@process.contentElementEditable = TYPO3.Neos:ContentElementEditable
+		@process.contentElementEditable.property = 'headingText'
+}

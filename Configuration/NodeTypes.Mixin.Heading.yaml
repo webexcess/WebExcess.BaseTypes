@@ -1,0 +1,93 @@
+# basetype-heading
+
+'WebExcess.BaseTypes:Heading.ui':
+  abstract: true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Heading:ui.label'
+    group: 'basetypes'
+    icon: icon-header
+    position: 10
+    inspector:
+      groups:
+        heading:
+          label: 'WebExcess.BaseTypes:NodeTypes.Heading:groups.heading'
+          icon: icon-header
+          tab: default
+
+'WebExcess.BaseTypes:Heading.properties.headingText':
+  abstract: true
+  properties:
+    headingText:
+      type: 'string'
+      ui:
+        inlineEditable: false
+
+'WebExcess.BaseTypes:Heading.properties.headingText--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Heading.properties.headingText': true
+  properties:
+    'headingText':
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Heading:properties.headingText'
+        reloadIfChanged: true
+        inspector:
+          group: 'heading'
+          editor: 'TYPO3.Neos/Inspector/Editors/TextFieldEditor'
+
+'WebExcess.BaseTypes:Heading.properties.headingText--inplace':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Heading.properties.headingText': true
+  properties:
+    'headingText':
+      ui:
+        inlineEditable: true
+        aloha:
+          'format': []
+          'table': []
+          'link': []
+          'list': []
+          'alignment': []
+          'formatlesspaste':
+            'button': false
+            'formatlessPasteOption': true
+            'strippedElements': ['a', 'br']
+            'autoparagraph': false
+
+'WebExcess.BaseTypes:Heading.properties.headingTagName':
+  abstract: true
+  properties:
+    headingTagName:
+      type: 'string'
+      defaultValue: 'auto'
+      ui:
+        inlineEditable: false
+
+'WebExcess.BaseTypes:Heading.properties.headingTagName--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Heading.properties.headingTagName': true
+  properties:
+    'headingTagName':
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Heading:properties.headingTagName'
+        reloadIfChanged: true
+        inspector:
+          group: 'heading'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              auto:
+                label: 'WebExcess.BaseTypes:NodeTypes.Heading:properties.headingTagName.auto'
+              h1:
+                label: 'H1'
+              h2:
+                label: 'H2'
+              h3:
+                label: 'H3'
+              h4:
+                label: 'H4'
+
+#'WebExcess.BaseTypes:Heading.properties.headingTagName--inplace':
+#  abstract: true

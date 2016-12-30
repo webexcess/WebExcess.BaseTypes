@@ -1,0 +1,72 @@
+# basetype-grid
+
+'WebExcess.BaseTypes:2Grid':
+  superTypes:
+    'WebExcess.BaseTypes:Content': true
+    'WebExcess.BaseTypes:Grid.ui': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayout--inspector': true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Grid:ui.label.2'
+    position: 10
+  childNodes:
+    col1: &typeContentCollection
+      type: 'TYPO3.Neos:ContentCollection'
+    col2: *typeContentCollection
+  properties:
+    'gridLayout':
+      defaultValue: '6-6'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '12': ~
+              '6-6':
+                label: '50% / 50%'
+              '8-4':
+                label: '66% / 33%'
+              '4-8':
+                label: '33% / 66%'
+
+'WebExcess.BaseTypes:3Grid':
+  superTypes:
+    'WebExcess.BaseTypes:Content': true
+    'WebExcess.BaseTypes:Grid.ui': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayout--inspector': true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Grid:ui.label.3'
+    position: 20
+  childNodes:
+    col1: *typeContentCollection
+    col2: *typeContentCollection
+    col3: *typeContentCollection
+  properties:
+    'gridLayout':
+      defaultValue: '4-4-4'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '12': ~
+              '4-4-4':
+                label: '33% / 33% / 33%'
+              '3-6-3':
+                label: '25% / 50% / 25%'
+              '6-3-3':
+                label: '50% / 25% / 25%'
+
+'WebExcess.BaseTypes:4Grid':
+  superTypes:
+    'WebExcess.BaseTypes:Content': true
+    'WebExcess.BaseTypes:Grid.ui': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayout': true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Grid:ui.label.4'
+    position: 30
+  childNodes:
+    col1: *typeContentCollection
+    col2: *typeContentCollection
+    col3: *typeContentCollection
+    col4: *typeContentCollection
+  properties:
+    'gridLayout':
+      defaultValue: '3-3-3-3'

@@ -1,0 +1,11 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+<header>
+	{parts.header -> f:format.raw()}
+</header>
+<main{mainAttributes -> f:format.raw()}>
+	<f:render section="Content" />
+</main>
+<footer>
+	{parts.footer -> f:format.raw()}
+</footer>

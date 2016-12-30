@@ -1,0 +1,12 @@
+# basetype-home
+
+prototype(WebExcess.BaseTypes:Home) >
+prototype(WebExcess.BaseTypes:Home) < prototype(WebExcess.BaseTypes:PageObject) {
+
+	bodyTag.attributes.class {
+		pageClass = "basetype-home"
+	}
+
+}
+
+prototype(WebExcess.BaseTypes:Home.Document) < prototype(WebExcess.BaseTypes:Home)

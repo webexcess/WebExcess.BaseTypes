@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="WebExcess.BaseTypes" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" xml:space="preserve">
+				<source>Image SVG</source>
+			</trans-unit>
+			<trans-unit id="groups.imageSvg" xml:space="preserve">
+				<source>SVG</source>
+			</trans-unit>
+			<trans-unit id="properties.explicitWidth" xml:space="preserve">
+				<source>SVG Width</source>
+			</trans-unit>
+			<trans-unit id="properties.explicitWidthUnit" xml:space="preserve">
+				<source>Width Unit</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

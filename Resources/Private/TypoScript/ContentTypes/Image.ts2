@@ -1,0 +1,64 @@
+# basetype-image
+
+prototype(WebExcess.BaseTypes:Image) >
+prototype(WebExcess.BaseTypes:Image) < prototype(WebExcess.BaseTypes:Content) {
+
+	imageAsset = ${q(node).property('imageAsset')}
+	@context.imageAsset = ${this.imageAsset}
+
+	linkStyle = TYPO3.TypoScript:Value {
+		value = ${q(node).property('linkStyle')}
+	}
+	@context.linkStyle = ${this.linkStyle}
+
+	buttonMode = TYPO3.TypoScript:Value {
+		value = ${q(node).property('buttonMode')}
+	}
+	@context.buttonMode = ${this.buttonMode}
+
+	buttonUrl = TYPO3.TypoScript:Case {
+		hasImageAndLinkToIt {
+			condition = ${q(node).property('imageAsset') && q(node).property('buttonMode') != 'auto'}
+			renderer = TYPO3.Neos:ImageUri {
+				asset = ${q(node).property('imageAsset')}
+			}
+		}
+		hasLinkAndIsNotDisabled {
+			condition = ${!String.isBlank(q(node).property('buttonUrl')) && q(node).property('buttonMode') == 'auto'}
+			renderer = ${q(node).property('buttonUrl')}
+		}
+		default {
+			condition = ${true}
+			renderer = ${null}
+		}
+	}
+	@context.buttonUrl = ${this.buttonUrl}
+
+	hasLink = ${this.buttonUrl ? true : false}
+	@context.hasLink = ${this.hasLink}
+
+	content = TYPO3.TypoScript:Array {
+
+		linkOpening = WebExcess.BaseTypes:LinkObject {
+			tagName = ${isLive ? 'a' : 'span'}
+			omitClosingTag = TRUE
+			href = ${buttonUrl}
+			@process.contentElementEditable >
+			attributes.class {
+				isLightbox = ${buttonMode == 'lightbox' ? 'is-lightbox': null}
+				isOriginal = ${buttonMode == 'original' ? 'is-original': null}
+				isLink = ${buttonMode == 'auto' ? 'is-link': null}
+			}
+			@if.hasLink = ${hasLink}
+		}
+
+		image = WebExcess.BaseTypes:ImageObject {
+			asset = ${imageAsset}
+		}
+
+		linkClosing = TYPO3.TypoScript:Value {
+			value = '</a>'
+			@if.hasLink = ${hasLink}
+		}
+	}
+}

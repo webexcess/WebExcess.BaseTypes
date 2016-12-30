@@ -1,0 +1,22 @@
+# basetype-button
+
+'WebExcess.BaseTypes:Button':
+  superTypes:
+    'WebExcess.BaseTypes:Content': true
+    'WebExcess.BaseTypes:Button.ui': true
+    'WebExcess.BaseTypes:Button.properties.buttonUrl--inspector': true
+    'WebExcess.BaseTypes:Button.properties.buttonStyle--inspector': true
+    'WebExcess.BaseTypes:Button.properties.buttonText--inplace': true
+  properties:
+    buttonStyle:
+      defaultValue: 'btn-default'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              'btn-default':
+                label: 'Default'
+              'btn-primary':
+                label: 'Primary'
+              'btn-link':
+                label: 'Link'

@@ -1,0 +1,60 @@
+# basetype-grid
+
+prototype(WebExcess.BaseTypes:GridObject) >
+prototype(WebExcess.BaseTypes:GridObject) < prototype(WebExcess.BaseTypes:Content) {
+	grid = ${q(node).property('gridLayout')}
+	@context.grid = ${this.grid}
+	cols = ${String.split(this.grid, '-')}
+	@context.cols = ${this.cols}
+
+	xsGrid = '12-12-12-12'
+	xsGrid.@process.10 = ${this.grid == '3-3-3-3' ? '6-6-6-6' : value}
+	xsGrid.@process.20 = ${this.grid == '6-3-3' ? '12-6-6' : value}
+	@context.xsGrid = ${this.xsGrid}
+	xsCols = ${String.split(this.xsGrid, '-')}
+	@context.xsCols = ${this.xsCols}
+
+	attributes.class = TYPO3.TypoScript:RawArray {
+		isBackend = ${!isLive ? 'neos-contentelement' : ''}
+		grid = ${'grid-' + grid}
+
+		row = 'basetype-grid row'
+		row.@if.multipleExists = ${Array.length(cols) >= 2}
+
+		nodeTypeName = 'basetype-grid'
+		nodeTypeName.@if.onlyOneExists = ${Array.length(cols) == 1}
+	}
+
+	content = TYPO3.TypoScript:Array {
+		col = TYPO3.Neos:ContentCollection {
+			nodePath = 'col1'
+			@if.onlyOneExists = ${Array.length(cols) == 1}
+		}
+		col1 = TYPO3.TypoScript:Tag {
+			attributes.class = ${'column col-sm-' + cols[0] + ' col-xs-' + xsCols[0]}
+			content = TYPO3.Neos:ContentCollection
+			content.nodePath = 'col1'
+			@if.multipleExists = ${Array.length(cols) >= 2}
+		}
+		col2 = TYPO3.TypoScript:Tag {
+			attributes.class = ${'column col-sm-' + cols[1] + ' col-xs-' + xsCols[1]}
+			content = TYPO3.Neos:ContentCollection
+			content.nodePath = 'col2'
+			@if.multipleExists = ${Array.length(cols) >= 2}
+		}
+		col3 = TYPO3.TypoScript:Tag {
+			attributes.class = ${'column col-sm-' + cols[2] + ' col-xs-' + xsCols[2]}
+			content = TYPO3.Neos:ContentCollection
+			content.nodePath = 'col3'
+			@if.multipleExists = ${Array.length(cols) >= 3}
+		}
+		col4 = TYPO3.TypoScript:Tag {
+			attributes.class = ${'column col-sm-' + cols[3] + ' col-xs-' + xsCols[3]}
+			content = TYPO3.Neos:ContentCollection
+			content.nodePath = 'col4'
+			@if.multipleExists = ${Array.length(cols) >= 4}
+		}
+	}
+
+	@process.contentElementWrapping.renderCurrentDocumentMetadata = true
+}

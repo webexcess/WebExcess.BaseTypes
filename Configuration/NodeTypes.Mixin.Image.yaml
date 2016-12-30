@@ -1,0 +1,44 @@
+# basetype-image
+
+'WebExcess.BaseTypes:Image.ui':
+  abstract: true
+  ui:
+    label: 'WebExcess.BaseTypes:NodeTypes.Image:ui.label'
+    group: 'basetypes'
+    icon: icon-picture
+    position: 40
+    inspector:
+      groups:
+        image:
+          label: 'WebExcess.BaseTypes:NodeTypes.Image:groups.image'
+          icon: icon-image
+          tab: default
+
+'WebExcess.BaseTypes:Image.properties.imageAsset':
+  abstract: true
+  properties:
+    imageAsset:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        inlineEditable: false
+        inspector:
+          group: hidden
+
+'WebExcess.BaseTypes:Image.properties.imageAsset--inspector':
+  abstract: true
+  superTypes:
+    'WebExcess.BaseTypes:Image.properties.imageAsset': true
+  properties:
+    'imageAsset':
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Image:properties.imageAsset'
+        reloadIfChanged: true
+        inspector:
+          group: image
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+
+#'WebExcess.BaseTypes:Image.properties.imageAsset--inplace':
+#  abstract: true

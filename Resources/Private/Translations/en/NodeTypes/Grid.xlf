@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="WebExcess.BaseTypes" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" xml:space="preserve">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="ui.label.2" xml:space="preserve">
+				<source>2-Grid</source>
+			</trans-unit>
+			<trans-unit id="ui.label.3" xml:space="preserve">
+				<source>3-Grid</source>
+			</trans-unit>
+			<trans-unit id="ui.label.4" xml:space="preserve">
+				<source>4-Grid</source>
+			</trans-unit>
+			<trans-unit id="groups.grid" xml:space="preserve">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="properties.gridLayout" xml:space="preserve">
+				<source>Layout</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

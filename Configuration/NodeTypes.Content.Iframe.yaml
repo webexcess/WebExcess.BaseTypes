@@ -1,0 +1,9 @@
+# basetype-button
+
+'WebExcess.BaseTypes:Iframe':
+  superTypes:
+    'WebExcess.BaseTypes:Content': true
+    'WebExcess.BaseTypes:Iframe.ui': true
+    'WebExcess.BaseTypes:Iframe.properties.iframeUrl--inspector': true
+    'WebExcess.BaseTypes:Iframe.properties.iframeRatioX--inspector': true
+    'WebExcess.BaseTypes:Iframe.properties.iframeRatioY--inspector': true

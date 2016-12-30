@@ -1,0 +1,19 @@
+# basetype-heading
+
+'WebExcess.BaseTypes:Heading':
+  superTypes:
+    'WebExcess.BaseTypes:Content': true
+    'WebExcess.BaseTypes:Heading.ui': true
+    'WebExcess.BaseTypes:Heading.properties.headingText--inplace': true
+    'WebExcess.BaseTypes:Heading.properties.headingTagName--inspector': true
+
+# Example usage in a tempate with a fixed property value:
+#  'WebExcess.BaseTypes:ChapterTemplateInklHeading1':
+#    superTypes:
+#      'WebExcess.BaseTypes:Document': true
+#      'WebExcess.BaseTypes:Heading.properties.headingText--inplace': true
+#      'WebExcess.BaseTypes:Heading.properties.headingTagName': true
+#    properties:
+#      headingTagName:
+#        defaultValue: 'h1'
+

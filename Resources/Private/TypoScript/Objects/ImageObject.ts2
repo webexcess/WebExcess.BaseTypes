@@ -1,0 +1,91 @@
+# basetype-image
+
+prototype(WebExcess.BaseTypes:ImageObject) >
+prototype(WebExcess.BaseTypes:ImageObject) < prototype(TYPO3.TypoScript:Tag) {
+	tagName = 'img'
+
+	config = ${Configuration.setting('WebExcess.BaseTypes')}
+
+	# globals..
+	@context {
+		config = ${this.config}
+		asset = ${this.asset}
+		imageMaxWidth = ${this.imageMaxWidth}
+		imageMaxHeight = ${this.imageMaxHeight}
+		imageCropping = ${this.imageCropping}
+		imageUpScaling = ${this.imageUpScaling}
+	}
+
+	# changeables..
+	asset = ${q(node).property('asset')}
+	imageMaxWidth = ${this.asset.width > this.config.Image.maxWidth ? this.config.Image.maxWidth : this.asset.width}
+	imageMaxHeight = ${this.asset.height > this.config.Image.maxHeight ? this.config.Image.maxHeight : this.asset.height}
+	imageCropping = ${this.config.Image.cropping}
+	imageUpScaling = ${this.config.Image.upScaling}
+
+	# logic..
+	attributes = TYPO3.TypoScript:Attributes {
+		src = TYPO3.TypoScript:Case {
+			hasImage {
+				condition = ${asset}
+				renderer = TYPO3.Neos:ImageUri {
+					asset = ${asset}
+					maximumWidth = ${Math.ceil(imageMaxWidth / 2)}
+					maximumHeight = ${Math.ceil(imageMaxHeight / 2)}
+					allowCropping = ${imageCropping}
+					allowUpScaling = ${imageUpScaling}
+				}
+			}
+			default {
+				condition = true
+				renderer = TYPO3.TypoScript:ResourceUri {
+					package = 'TYPO3.Neos'
+					path = 'resource://TYPO3.Neos/Public/Images/dummy-image.svg'
+				}
+			}
+		}
+
+		srcset = TYPO3.TypoScript:Array {
+			50 = TYPO3.Neos:ImageUri {
+				asset = ${asset}
+				maximumWidth = ${Math.ceil(asset.width / 4)}
+				maximumHeight = ${Math.ceil(asset.height / 4)}
+				allowCropping = ${imageCropping}
+				allowUpScaling = ${imageUpScaling}
+				@process.addResolution = ${value + ' 0.5x'}
+			}
+			100 = TYPO3.Neos:ImageUri {
+				asset = ${asset}
+				maximumWidth = ${Math.ceil(asset.width / 2)}
+				maximumHeight = ${Math.ceil(asset.height / 2)}
+				allowCropping = ${imageCropping}
+				allowUpScaling = ${imageUpScaling}
+				@process.addResolution = ${', ' + value + ' 1x'}
+			}
+			# original image..
+			200 = TYPO3.Neos:ImageUri {
+				asset = ${asset}
+				maximumWidth = ${asset.width}
+				maximumHeight = ${asset.height}
+				allowCropping = ${imageCropping}
+				allowUpScaling = ${imageUpScaling}
+				@process.addResolution = ${', ' + value + ' 2x'}
+			}
+			@if.hasAsset = ${asset}
+		}
+
+		title = TYPO3.TypoScript:Case {
+			hasImage {
+				condition = ${asset}
+				renderer = ${asset.title}
+			}
+		}
+
+		alt = TYPO3.TypoScript:Case {
+			hasImage {
+				condition = ${asset}
+				renderer = ${asset.title}
+			}
+		}
+	}
+}

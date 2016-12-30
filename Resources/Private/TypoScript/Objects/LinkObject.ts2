@@ -1,0 +1,31 @@
+# basetype-link
+
+prototype(WebExcess.BaseTypes:LinkObject) >
+prototype(WebExcess.BaseTypes:LinkObject) < prototype(TYPO3.TypoScript:Tag) {
+	tagName = 'a'
+
+	node = ${node}
+	@context.node = ${this.node}
+
+	config = ${Configuration.setting('WebExcess.BaseTypes')}
+	@context.config = ${this.config}
+
+	href = ${q(node).property('url')}
+	@context.href = ${this.href}
+
+	linktext = ${'Link Text'}
+	@context.linktext = ${this.linktext}
+
+	hrefIsExternal = ${String.indexOf(this.href, 'http') == 0 ? true : false}
+	@override.hrefIsExternal = ${this.hrefIsExternal}
+
+	attributes.class = TYPO3.TypoScript:RawArray {
+		link  = 'link'
+		isExternal = ${hrefIsExternal ? 'url-is-external' : null}
+	}
+
+	attributes.href = ${href}
+
+	content = ${linktext}
+
+}

@@ -1,0 +1,26 @@
+{
+    "name": "webexcess/basetypes",
+    "type": "typo3-flow-plugin",
+    "version": "0.0.6",
+    "license": "MIT",
+    "description": "Basic NodeTypes for Neos",
+    "keywords": [
+        "flow",
+        "neos",
+        "content",
+        "nodetypes"
+    ],
+    "authors": [
+        {
+            "name": "Stefan Bruggmann",
+            "email": "stefan.bruggmann@webexcess.ch",
+            "homepage": "https://twitter.com/webexcess",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/neos": "2.*",
+        "typo3/neos-nodetypes": "*",
+        "flowpack/listable": "*"
+    }
+}
