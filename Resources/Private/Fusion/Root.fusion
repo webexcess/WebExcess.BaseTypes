@@ -1,6 +1,6 @@
-include: Objects/**/*.ts2
-include: ContentTypes/**/*.ts2
-include: DocumentTypes/**/*.ts2
+include: Objects/**/*.fusion
+include: ContentTypes/**/*.fusion
+include: DocumentTypes/**/*.fusion
 
 # Dmitri Pisarev: "Copy-paste is much better than DRY in a lot of cases...
 #                  Bad abstraction is much worse than no abstraction."
