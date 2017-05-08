@@ -18,7 +18,7 @@
 					</properties>
 				</variant>
 				<node identifier="7b41b56c-011d-e346-9e3c-df9a343d1948" nodeName="main">
-					<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+					<variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2"
 							 removed="" hidden="" hiddenInIndex="">
 						<dimensions/>
 						<accessRoles __type="array"/>
@@ -78,7 +78,7 @@
 						</properties>
 					</variant>
 					<node identifier="9918d297-8a13-2da4-0125-0a4dd17b055f" nodeName="main">
-						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+						<variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2"
 								 removed="" hidden="" hiddenInIndex="">
 							<dimensions/>
 							<accessRoles __type="array"/>
