@@ -28,7 +28,7 @@ prototype(WebExcess.BaseTypes:ImageObject) < prototype(Neos.Fusion:Tag) {
 		src = Neos.Fusion:Case {
 			hasImage {
 				condition = ${asset}
-				renderer = TYPO3.Neos:ImageUri {
+				renderer = Neos.Neos:ImageUri {
 					asset = ${asset}
 					maximumWidth = ${Math.ceil(imageMaxWidth / 2)}
 					maximumHeight = ${Math.ceil(imageMaxHeight / 2)}
@@ -39,14 +39,14 @@ prototype(WebExcess.BaseTypes:ImageObject) < prototype(Neos.Fusion:Tag) {
 			default {
 				condition = true
 				renderer = Neos.Fusion:ResourceUri {
-					package = 'TYPO3.Neos'
-					path = 'resource://TYPO3.Neos/Public/Images/dummy-image.svg'
+					package = 'Neos.Neos'
+					path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
 				}
 			}
 		}
 
 		srcset = Neos.Fusion:Array {
-			50 = TYPO3.Neos:ImageUri {
+			50 = Neos.Neos:ImageUri {
 				asset = ${asset}
 				maximumWidth = ${Math.ceil(asset.width / 4)}
 				maximumHeight = ${Math.ceil(asset.height / 4)}
@@ -54,7 +54,7 @@ prototype(WebExcess.BaseTypes:ImageObject) < prototype(Neos.Fusion:Tag) {
 				allowUpScaling = ${imageUpScaling}
 				@process.addResolution = ${value + ' 0.5x'}
 			}
-			100 = TYPO3.Neos:ImageUri {
+			100 = Neos.Neos:ImageUri {
 				asset = ${asset}
 				maximumWidth = ${Math.ceil(asset.width / 2)}
 				maximumHeight = ${Math.ceil(asset.height / 2)}
@@ -63,7 +63,7 @@ prototype(WebExcess.BaseTypes:ImageObject) < prototype(Neos.Fusion:Tag) {
 				@process.addResolution = ${', ' + value + ' 1x'}
 			}
 			# original image..
-			200 = TYPO3.Neos:ImageUri {
+			200 = Neos.Neos:ImageUri {
 				asset = ${asset}
 				maximumWidth = ${asset.width}
 				maximumHeight = ${asset.height}

@@ -1,5 +1,5 @@
 prototype(WebExcess.BaseTypes:PageObject) >
-prototype(WebExcess.BaseTypes:PageObject) < prototype(TYPO3.Neos:Page) {
+prototype(WebExcess.BaseTypes:PageObject) < prototype(Neos.Neos:Page) {
 
 	head {
 		mobileMetaTags = '<meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -32,7 +32,7 @@ prototype(WebExcess.BaseTypes:PageObject.Body) < prototype(Neos.Fusion:Template)
 	layoutName = ${layoutName ? layoutName : 'Page'}
 
 	content {
-		main = TYPO3.Neos:PrimaryContent {
+		main = Neos.Neos:PrimaryContent {
 			nodePath = 'main'
 		}
 	}

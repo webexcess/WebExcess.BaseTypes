@@ -19,7 +19,7 @@ prototype(WebExcess.BaseTypes:Image) < prototype(WebExcess.BaseTypes:Content) {
 	buttonUrl = Neos.Fusion:Case {
 		hasImageAndLinkToIt {
 			condition = ${q(node).property('imageAsset') && q(node).property('buttonMode') != 'auto'}
-			renderer = TYPO3.Neos:ImageUri {
+			renderer = Neos.Neos:ImageUri {
 				asset = ${q(node).property('imageAsset')}
 			}
 		}

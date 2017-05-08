@@ -18,6 +18,6 @@ prototype(WebExcess.BaseTypes:Iframe) < prototype(WebExcess.BaseTypes:Content) {
 		}
 		@process.wrap = ${'<div class="embed-container" style="padding-bottom: ' + ratio + '%; position: relative; height: 0; overflow: hidden; width: 100%; height: auto;">' + value + '</div>'}
 	}
-	@process.convertUris = TYPO3.Neos:ConvertUris
+	@process.convertUris = Neos.Neos:ConvertUris
 
 }

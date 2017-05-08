@@ -26,31 +26,31 @@ prototype(WebExcess.BaseTypes:GridObject) < prototype(WebExcess.BaseTypes:Conten
 	}
 
 	content = Neos.Fusion:Array {
-		col = TYPO3.Neos:ContentCollection {
+		col = Neos.Neos:ContentCollection {
 			nodePath = 'col1'
 			@if.onlyOneExists = ${Array.length(cols) == 1}
 		}
 		col1 = Neos.Fusion:Tag {
 			attributes.class = ${'column col-sm-' + cols[0] + ' col-xs-' + xsCols[0]}
-			content = TYPO3.Neos:ContentCollection
+			content = Neos.Neos:ContentCollection
 			content.nodePath = 'col1'
 			@if.multipleExists = ${Array.length(cols) >= 2}
 		}
 		col2 = Neos.Fusion:Tag {
 			attributes.class = ${'column col-sm-' + cols[1] + ' col-xs-' + xsCols[1]}
-			content = TYPO3.Neos:ContentCollection
+			content = Neos.Neos:ContentCollection
 			content.nodePath = 'col2'
 			@if.multipleExists = ${Array.length(cols) >= 2}
 		}
 		col3 = Neos.Fusion:Tag {
 			attributes.class = ${'column col-sm-' + cols[2] + ' col-xs-' + xsCols[2]}
-			content = TYPO3.Neos:ContentCollection
+			content = Neos.Neos:ContentCollection
 			content.nodePath = 'col3'
 			@if.multipleExists = ${Array.length(cols) >= 3}
 		}
 		col4 = Neos.Fusion:Tag {
 			attributes.class = ${'column col-sm-' + cols[3] + ' col-xs-' + xsCols[3]}
-			content = TYPO3.Neos:ContentCollection
+			content = Neos.Neos:ContentCollection
 			content.nodePath = 'col4'
 			@if.multipleExists = ${Array.length(cols) >= 4}
 		}

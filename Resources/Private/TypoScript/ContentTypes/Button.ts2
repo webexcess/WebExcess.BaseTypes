@@ -19,10 +19,10 @@ prototype(WebExcess.BaseTypes:Button) < prototype(WebExcess.BaseTypes:Content) {
 		content = Neos.Fusion:Tag {
 			tagName = 'span'
 			content = ${linktext}
-			@process.contentElementEditable = TYPO3.Neos:ContentElementEditable
+			@process.contentElementEditable = Neos.Neos:ContentElementEditable
 			@process.contentElementEditable.property = 'buttonText'
 		}
 	}
-	@process.convertUris = TYPO3.Neos:ConvertUris
+	@process.convertUris = Neos.Neos:ConvertUris
 
 }

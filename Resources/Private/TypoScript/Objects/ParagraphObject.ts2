@@ -4,7 +4,7 @@ prototype(WebExcess.BaseTypes:ParagraphObject) >
 prototype(WebExcess.BaseTypes:ParagraphObject) < prototype(Neos.Fusion:Tag) {
 	tagName = 'div'
 	content = ${q(node).property('paragraphText')}
-	@process.contentElementEditable = TYPO3.Neos:ContentElementEditable
+	@process.contentElementEditable = Neos.Neos:ContentElementEditable
 	@process.contentElementEditable.property = 'paragraphText'
-	@process.convertUris = TYPO3.Neos:ConvertUris
+	@process.convertUris = Neos.Neos:ConvertUris
 }
