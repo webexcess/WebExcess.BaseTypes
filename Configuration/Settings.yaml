@@ -10,9 +10,6 @@ WebExcess:
       upScaling: false
 Neos:
   Neos:
-    typoScript:
-      autoInclude:
-        WebExcess.BaseTypes: true
     userInterface:
       translation:
         autoInclude:
@@ -33,3 +30,6 @@ Neos:
           collapsed: false
         structure:
           collapsed: true
+    fusion:
+      autoInclude:
+        WebExcess.BaseTypes: true
