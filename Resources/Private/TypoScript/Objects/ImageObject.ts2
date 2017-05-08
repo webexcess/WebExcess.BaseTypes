@@ -1,7 +1,7 @@
 # basetype-image
 
 prototype(WebExcess.BaseTypes:ImageObject) >
-prototype(WebExcess.BaseTypes:ImageObject) < prototype(TYPO3.TypoScript:Tag) {
+prototype(WebExcess.BaseTypes:ImageObject) < prototype(Neos.Fusion:Tag) {
 	tagName = 'img'
 
 	config = ${Configuration.setting('WebExcess.BaseTypes')}
@@ -24,8 +24,8 @@ prototype(WebExcess.BaseTypes:ImageObject) < prototype(TYPO3.TypoScript:Tag) {
 	imageUpScaling = ${this.config.Image.upScaling}
 
 	# logic..
-	attributes = TYPO3.TypoScript:Attributes {
-		src = TYPO3.TypoScript:Case {
+	attributes = Neos.Fusion:Attributes {
+		src = Neos.Fusion:Case {
 			hasImage {
 				condition = ${asset}
 				renderer = TYPO3.Neos:ImageUri {
@@ -38,14 +38,14 @@ prototype(WebExcess.BaseTypes:ImageObject) < prototype(TYPO3.TypoScript:Tag) {
 			}
 			default {
 				condition = true
-				renderer = TYPO3.TypoScript:ResourceUri {
+				renderer = Neos.Fusion:ResourceUri {
 					package = 'TYPO3.Neos'
 					path = 'resource://TYPO3.Neos/Public/Images/dummy-image.svg'
 				}
 			}
 		}
 
-		srcset = TYPO3.TypoScript:Array {
+		srcset = Neos.Fusion:Array {
 			50 = TYPO3.Neos:ImageUri {
 				asset = ${asset}
 				maximumWidth = ${Math.ceil(asset.width / 4)}
@@ -74,14 +74,14 @@ prototype(WebExcess.BaseTypes:ImageObject) < prototype(TYPO3.TypoScript:Tag) {
 			@if.hasAsset = ${asset}
 		}
 
-		title = TYPO3.TypoScript:Case {
+		title = Neos.Fusion:Case {
 			hasImage {
 				condition = ${asset}
 				renderer = ${asset.title}
 			}
 		}
 
-		alt = TYPO3.TypoScript:Case {
+		alt = Neos.Fusion:Case {
 			hasImage {
 				condition = ${asset}
 				renderer = ${asset.title}

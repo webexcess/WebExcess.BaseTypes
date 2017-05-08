@@ -11,7 +11,7 @@ prototype(WebExcess.BaseTypes:PageObject) < prototype(TYPO3.Neos:Page) {
 		}
 	}
 
-	bodyTag.attributes.class = TYPO3.TypoScript:Array {
+	bodyTag.attributes.class = Neos.Fusion:Array {
 		# customClass = "custom-class"
 	}
 
@@ -20,7 +20,7 @@ prototype(WebExcess.BaseTypes:PageObject) < prototype(TYPO3.Neos:Page) {
 }
 
 prototype(WebExcess.BaseTypes:PageObject.Body) >
-prototype(WebExcess.BaseTypes:PageObject.Body) < prototype(TYPO3.TypoScript:Template) {
+prototype(WebExcess.BaseTypes:PageObject.Body) < prototype(Neos.Fusion:Template) {
 	@position = 'after bodyTag'
 	node = ${node}
 	site = ${site}
@@ -43,7 +43,7 @@ prototype(WebExcess.BaseTypes:PageObject.Body) < prototype(TYPO3.TypoScript:Temp
 	}
 
 	# Script includes before the closing body tag should go here
-	javascripts = TYPO3.TypoScript:Array{
+	javascripts = Neos.Fusion:Array{
 		# customJs = 'custom.js'
 	}
 

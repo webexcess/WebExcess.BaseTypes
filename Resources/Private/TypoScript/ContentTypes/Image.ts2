@@ -6,17 +6,17 @@ prototype(WebExcess.BaseTypes:Image) < prototype(WebExcess.BaseTypes:Content) {
 	imageAsset = ${q(node).property('imageAsset')}
 	@context.imageAsset = ${this.imageAsset}
 
-	linkStyle = TYPO3.TypoScript:Value {
+	linkStyle = Neos.Fusion:Value {
 		value = ${q(node).property('linkStyle')}
 	}
 	@context.linkStyle = ${this.linkStyle}
 
-	buttonMode = TYPO3.TypoScript:Value {
+	buttonMode = Neos.Fusion:Value {
 		value = ${q(node).property('buttonMode')}
 	}
 	@context.buttonMode = ${this.buttonMode}
 
-	buttonUrl = TYPO3.TypoScript:Case {
+	buttonUrl = Neos.Fusion:Case {
 		hasImageAndLinkToIt {
 			condition = ${q(node).property('imageAsset') && q(node).property('buttonMode') != 'auto'}
 			renderer = TYPO3.Neos:ImageUri {
@@ -37,7 +37,7 @@ prototype(WebExcess.BaseTypes:Image) < prototype(WebExcess.BaseTypes:Content) {
 	hasLink = ${this.buttonUrl ? true : false}
 	@context.hasLink = ${this.hasLink}
 
-	content = TYPO3.TypoScript:Array {
+	content = Neos.Fusion:Array {
 
 		linkOpening = WebExcess.BaseTypes:LinkObject {
 			tagName = ${isLive ? 'a' : 'span'}
@@ -56,7 +56,7 @@ prototype(WebExcess.BaseTypes:Image) < prototype(WebExcess.BaseTypes:Content) {
 			asset = ${imageAsset}
 		}
 
-		linkClosing = TYPO3.TypoScript:Value {
+		linkClosing = Neos.Fusion:Value {
 			value = '</a>'
 			@if.hasLink = ${hasLink}
 		}

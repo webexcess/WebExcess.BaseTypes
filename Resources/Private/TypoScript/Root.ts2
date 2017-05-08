@@ -11,14 +11,14 @@ include: DocumentTypes/**/*.ts2
 # @see https://de.wikipedia.org/wiki/David_Wheeler
 
 prototype(WebExcess.BaseTypes:Content) >
-prototype(WebExcess.BaseTypes:Content) < prototype(TYPO3.TypoScript:Tag) {
+prototype(WebExcess.BaseTypes:Content) < prototype(Neos.Fusion:Tag) {
 	tagName = 'div'
 
 	isLive = ${node.context.live}
 	@context.isLive = ${this.isLive}
 
 	attributes {
-		class = TYPO3.TypoScript:RawArray {
+		class = Neos.Fusion:RawArray {
 			nodeTypeName = ${q(node).property('_nodeType.name')}
 			nodeTypeName.@process.10 = ${String.replace(value, 'WebExcess.BaseTypes:', 'basetype-')}
 			nodeTypeName.@process.20 = ${String.pregReplace(value, '/[[:^alnum:]]/', '-')}

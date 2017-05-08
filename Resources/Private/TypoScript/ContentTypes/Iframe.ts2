@@ -8,7 +8,7 @@ prototype(WebExcess.BaseTypes:Iframe) < prototype(WebExcess.BaseTypes:Content) {
 	ratio = ${100 / this.iframeRatioX * this.iframeRatioY}
 	@context.ratio = ${this.ratio}
 
-	content = TYPO3.TypoScript:Tag {
+	content = Neos.Fusion:Tag {
 		tagName = 'iframe'
 		attributes {
 			src = ${q(node).property('iframeUrl')}
