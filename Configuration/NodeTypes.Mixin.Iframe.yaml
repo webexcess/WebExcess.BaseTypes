@@ -32,7 +32,7 @@
         inspector:
           group: 'iframe'
           position: 10
-          editor: 'TYPO3.Neos/Inspector/Editors/LinkEditor'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
 
 'WebExcess.BaseTypes:Iframe.properties.iframeRatioX':
   abstract: true
@@ -41,7 +41,7 @@
       type: integer
       defaultValue: '4'
       validation:
-        'TYPO3.Neos/Validation/IntegerValidator':
+        'Neos.Neos/Validation/IntegerValidator':
           minimum: 1
 
 'WebExcess.BaseTypes:Iframe.properties.iframeRatioX--inspector':
@@ -65,7 +65,7 @@
       type: integer
       defaultValue: '3'
       validation:
-        'TYPO3.Neos/Validation/IntegerValidator':
+        'Neos.Neos/Validation/IntegerValidator':
           minimum: 1
 
 'WebExcess.BaseTypes:Iframe.properties.iframeRatioY--inspector':

@@ -22,7 +22,7 @@
         reloadIfChanged: true
         inspector:
           group: 'image'
-          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
               'auto':

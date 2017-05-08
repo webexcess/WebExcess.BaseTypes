@@ -21,7 +21,7 @@
         reloadIfChanged: true
         inspector:
           group: 'imageSvg'
-          editor: 'TYPO3.Neos/Inspector/Editors/TextFieldEditor'
+          editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
     explicitWidthUnit:
       type: string
       defaultValue: '%'
@@ -31,7 +31,7 @@
         reloadIfChanged: true
         inspector:
           group: 'imageSvg'
-          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
               '%':

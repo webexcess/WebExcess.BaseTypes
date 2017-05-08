@@ -29,7 +29,7 @@
 #  abstract: TRUE
 #'Neos.NodeTypes:Menu':
 #  abstract: TRUE
-#'TYPO3.Neos:PluginView':
+#'Neos.Neos:PluginView':
 #  abstract: TRUE
 
 
@@ -39,17 +39,17 @@
   abstract: true
   label: "${String.replace(node.nodeType.name, 'WebExcess.BaseTypes:', '')}"
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
 
 'WebExcess.BaseTypes:Document':
   abstract: true
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   ui:
     label: 'Document'
     icon: 'icon-file'
   constraints:
     nodeTypes:
       'WebExcess.BaseTypes:Document': true
-      'TYPO3.Neos:Shortcut': true
+      'Neos.Neos:Shortcut': true
       'WebExcess.BaseTypes:Home': false
