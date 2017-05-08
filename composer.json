@@ -22,5 +22,10 @@
         "typo3/neos": "2.*",
         "typo3/neos-nodetypes": "*",
         "flowpack/listable": "*"
+    },
+    "extra": {
+        "applied-flow-migrations": [
+            "TYPO3.FLOW3-201201261636"
+        ]
     }
 }
