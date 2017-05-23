@@ -20,7 +20,7 @@
     ],
     "require": {
         "neos/neos": "3.*",
-        "neos/neos-nodetypes": "*",
+        "neos/nodetypes": "*",
         "flowpack/listable": "*"
     },
     "extra": {
