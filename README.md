@@ -8,6 +8,14 @@ Basic NodeTypes for [Neos CMS](https://www.neos.io/).
     composer require webexcess/basetypes
 
 
+## Compatibility and Maintenance
+
+| Neos Version | Package Version | Maintained |
+|--------------|-----------------|------------|
+| 3.x          | 1.x             | YES        |
+| 2.3 LTS      | 0.x             | NO         |
+
+
 ## Ready to use
 
 
@@ -61,4 +69,4 @@ BaseTypes is replacing and extending existing [Neos NodeTypes](https://github.co
    [David Wheeler](https://de.wikipedia.org/wiki/David_Wheeler)
 
 
-by [webexcess GmbH](http://webescess.ch/)
+by [webexcess GmbH](https://webexcess.ch/)
