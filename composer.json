@@ -1,7 +1,6 @@
 {
     "name": "webexcess/basetypes",
     "type": "typo3-flow-plugin",
-    "version": "0.1.0",
     "license": "MIT",
     "description": "Basic NodeTypes for Neos",
     "keywords": [
