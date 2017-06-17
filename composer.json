@@ -1,14 +1,13 @@
 {
     "name": "webexcess/basetypes",
     "type": "typo3-flow-plugin",
-    "version": "0.1.0",
     "license": "MIT",
     "description": "Basic NodeTypes for Neos",
     "keywords": [
-        "flow",
         "neos",
         "content",
-        "nodetypes"
+        "nodetypes",
+        "prototypes"
     ],
     "authors": [
         {
@@ -20,8 +19,12 @@
     ],
     "require": {
         "neos/neos": "3.*",
+        "neos/flow": "*",
         "neos/nodetypes": "*",
         "flowpack/listable": "*"
+    },
+    "conflict": {
+        "dotpulse/base": "*"
     },
     "autoload": {
         "psr-4": {
@@ -29,6 +32,10 @@
         }
     },
     "extra": {
+        "installer-name": "WebExcess.BaseTypes",
+        "neos": {
+            "package-key": "WebExcess.BaseTypes"
+        },
         "applied-flow-migrations": [
             "TYPO3.FLOW3-201201261636",
             "TYPO3.Fluid-201205031303",
