@@ -23,7 +23,7 @@ Basic NodeTypes for [Neos CMS](https://www.neos.io/).
 
 * Heading
 * Paragraph
-* Image (incl. srcset)
+* Responsive Image (srcset)
 * SVG-Image
 * Button
 * Responsive Iframe
@@ -40,10 +40,20 @@ Basic NodeTypes for [Neos CMS](https://www.neos.io/).
 * Each first code-line of a file contains a comment with the respective css class, e.g. `# basetype-paragraph`
 * Properties are always namespaced with the BaseType Name, e.g. `paragraphText` - not only `text`
 
+**Structure:**
+
+* Each NodeType is composed out of Mixin parts. For the Paragraph these are:
+  * `WebExcess.BaseTypes:Content` defines the NodeType as a Content-Element
+  * `WebExcess.BaseTypes:Paragraph.ui` makes the NodeType an needed Inspector Groups visible
+  * `WebExcess.BaseTypes:Paragraph.properties.paragraphText--inplace` enables the Property paragraphText with inplace settings
+* Each Property is available in three modes:
+  * `WebExcess.BaseTypes:Paragraph.properties.paragraphText` the basic property settings
+  * `WebExcess.BaseTypes:Paragraph.properties.paragraphText--inspector` .. including the inspector settings
+  * `WebExcess.BaseTypes:Paragraph.properties.paragraphText--inplace` .. including the inplace settings
+
 **Hint:**
 
 * Import your initial content with `./flow site:import --package-key WebExcess.BaseTypes`
-
 
 ## Usage / Extending
 
@@ -51,12 +61,40 @@ BaseTypes is replacing and extending existing [Neos NodeTypes](https://github.co
 
 **Example:**
 
-	'WebExcess.Theme:Home':
+Create in your Theme Package a Teaser-NodeType which includes an image, an inplace editable heading and text..
+
+_NodeTypes.Teaser.yaml_
+
+	'WebExcess.Theme:Teaser':
 		superTypes:
-			'WebExcess.BaseTypes:Document': true
+			'WebExcess.BaseTypes:Content': true
+			'WebExcess.BaseTypes:Heading.ui': true
 			'WebExcess.BaseTypes:Heading.properties.headingText--inplace': true
+			'WebExcess.BaseTypes:Heading.properties.headingTagName--inspector': true
+			'WebExcess.BaseTypes:Paragraph.ui': true
+			'WebExcess.BaseTypes:Paragraph.properties.paragraphText--inplace': true
+			'WebExcess.BaseTypes:Image.ui': true
+			'WebExcess.BaseTypes:Image.properties.imageAsset--inspector': true
+			'WebExcess.BaseTypes:Button.properties.buttonUrl--inspector': true
+			'WebExcess.BaseTypes:Button.properties.buttonStyle': true
 		ui:
-			label: 'Home'
+			label: 'Teaser'
+			icon: icon-file-text-o
+
+_NodeTypes.Teaser.fusion_
+
+	prototype(WebExcess.Theme:Teaser) >
+	prototype(WebExcess.Theme:Teaser) < prototype(WebExcess.BaseTypes:Image) {
+		content = Neos.Fusion:Array {
+			heading = WebExcess.BaseTypes:HeadingObject
+			heading.@position = 'after image'
+			
+			text = WebExcess.BaseTypes:ParagraphObject
+			text.@position = 'after heading'
+		}
+	}
+
+That's all
 
 
 ## Think about
