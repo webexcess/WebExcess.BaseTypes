@@ -32,6 +32,8 @@
     'imageAsset':
       ui:
         label: 'WebExcess.BaseTypes:NodeTypes.Image:properties.imageAsset'
+        help:
+          message: 'WebExcess.BaseTypes:NodeTypes.Image:properties.imageAsset.help'
         reloadIfChanged: true
         inspector:
           group: image
