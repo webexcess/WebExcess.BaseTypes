@@ -1,135 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<site name="WebExcess.BaseTypes" state="1" siteResourcesPackageKey="WebExcess.Theme" siteNodeName="theme">
-		<nodes formatVersion="2.0">
-			<node identifier="5809efec-60a0-4938-a49e-f661ac6aa4f2" nodeName="theme">
-				<variant sortingIndex="100" workspace="live" nodeType="WebExcess.BaseTypes:Home" version="3" removed=""
-						 hidden="" hiddenInIndex="">
-					<dimensions/>
-					<accessRoles __type="array"/>
-					<creationDateTime __type="object" __classname="DateTime">-0001-11-30T00:00:00+00:53
-					</creationDateTime>
-					<lastModificationDateTime __type="object" __classname="DateTime">2016-12-27T19:08:38+01:00
-					</lastModificationDateTime>
-					<properties>
-						<title __type="string">Home</title>
-						<uriPathSegment __type="string">home</uriPathSegment>
-						<canonicalLink __type="string"></canonicalLink>
-					</properties>
-				</variant>
-				<node identifier="7b41b56c-011d-e346-9e3c-df9a343d1948" nodeName="main">
-					<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
-							 removed="" hidden="" hiddenInIndex="">
-						<dimensions/>
-						<accessRoles __type="array"/>
-						<creationDateTime __type="object" __classname="DateTime">-0001-11-30T00:00:00+00:53
-						</creationDateTime>
-						<lastModificationDateTime __type="object" __classname="DateTime">-0001-11-30T00:00:00+00:53
-						</lastModificationDateTime>
-						<properties/>
-					</variant>
-					<node identifier="9b9aea86-3889-42a8-9d18-ffd1e7a8d83c" nodeName="node-5862b1f3db796">
-						<variant sortingIndex="100" workspace="live" nodeType="WebExcess.BaseTypes:Heading" version="6"
-								 removed="" hidden="" hiddenInIndex="">
-							<dimensions/>
-							<accessRoles __type="array"/>
-							<creationDateTime __type="object" __classname="DateTime">2016-12-27T19:24:51+01:00
-							</creationDateTime>
-							<lastModificationDateTime __type="object" __classname="DateTime">2016-12-27T19:25:53+01:00
-							</lastModificationDateTime>
-							<lastPublicationDateTime __type="object" __classname="DateTime">2016-12-27T19:25:53+01:00
-							</lastPublicationDateTime>
-							<properties>
-								<headingTagName __type="string">auto</headingTagName>
-								<headingText __type="string">Home title..</headingText>
-							</properties>
-						</variant>
-					</node>
-					<node identifier="993ad6d2-0e22-4ee6-a3f8-1abfdec1367a" nodeName="node-5862b20148922">
-						<variant sortingIndex="150" workspace="live" nodeType="WebExcess.BaseTypes:Paragraph"
-								 version="6" removed="" hidden="" hiddenInIndex="">
-							<dimensions/>
-							<accessRoles __type="array"/>
-							<creationDateTime __type="object" __classname="DateTime">2016-12-27T19:25:05+01:00
-							</creationDateTime>
-							<lastModificationDateTime __type="object" __classname="DateTime">2016-12-27T19:25:53+01:00
-							</lastModificationDateTime>
-							<lastPublicationDateTime __type="object" __classname="DateTime">2016-12-27T19:25:53+01:00
-							</lastPublicationDateTime>
-							<properties>
-								<paragraphText __type="string">&lt;p&gt;Home main content..&lt;/p&gt;</paragraphText>
-							</properties>
-						</variant>
-					</node>
-				</node>
-				<node identifier="0a34fa33-58b1-4b8d-8f17-a1dc89e6c6b5" nodeName="node-586259a878766">
-					<variant sortingIndex="200" workspace="live" nodeType="WebExcess.BaseTypes:Page" version="3"
-							 removed="" hidden="" hiddenInIndex="">
-						<dimensions/>
-						<accessRoles __type="array"/>
-						<creationDateTime __type="object" __classname="DateTime">-0001-11-30T00:00:00+00:53
-						</creationDateTime>
-						<lastModificationDateTime __type="object" __classname="DateTime">2016-12-27T19:08:38+01:00
-						</lastModificationDateTime>
-						<properties>
-							<uriPathSegment __type="string">page</uriPathSegment>
-							<title __type="string">Page</title>
-							<canonicalLink __type="string"></canonicalLink>
-						</properties>
-					</variant>
-					<node identifier="9918d297-8a13-2da4-0125-0a4dd17b055f" nodeName="main">
-						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
-								 removed="" hidden="" hiddenInIndex="">
-							<dimensions/>
-							<accessRoles __type="array"/>
-							<creationDateTime __type="object" __classname="DateTime">-0001-11-30T00:00:00+00:53
-							</creationDateTime>
-							<lastModificationDateTime __type="object" __classname="DateTime">
-								-0001-11-30T00:00:00+00:53
-							</lastModificationDateTime>
-							<properties/>
-						</variant>
-						<node identifier="7930473a-34b4-4209-bff0-f04754f0a13f" nodeName="node-586259b312786">
-							<variant sortingIndex="100" workspace="live" nodeType="WebExcess.BaseTypes:Heading"
-									 version="5" removed="" hidden="" hiddenInIndex="">
-								<dimensions/>
-								<accessRoles __type="array"/>
-								<creationDateTime __type="object" __classname="DateTime">-0001-11-30T00:00:00+00:53
-								</creationDateTime>
-								<lastModificationDateTime __type="object" __classname="DateTime">
-									2016-12-27T19:26:26+01:00
-								</lastModificationDateTime>
-								<lastPublicationDateTime __type="object" __classname="DateTime">
-									2016-12-27T19:26:26+01:00
-								</lastPublicationDateTime>
-								<properties>
-									<headingTagName __type="string">auto</headingTagName>
-									<headingText __type="string">Page title..</headingText>
-								</properties>
-							</variant>
-						</node>
-						<node identifier="5cd2ebc5-b221-440b-8af1-de7e59eb163e" nodeName="node-586259c07ccb6">
-							<variant sortingIndex="150" workspace="live" nodeType="WebExcess.BaseTypes:Paragraph"
-									 version="7" removed="" hidden="" hiddenInIndex="">
-								<dimensions/>
-								<accessRoles __type="array"/>
-								<creationDateTime __type="object" __classname="DateTime">-0001-11-30T00:00:00+00:53
-								</creationDateTime>
-								<lastModificationDateTime __type="object" __classname="DateTime">
-									2016-12-27T19:26:26+01:00
-								</lastModificationDateTime>
-								<lastPublicationDateTime __type="object" __classname="DateTime">
-									2016-12-27T19:26:26+01:00
-								</lastPublicationDateTime>
-								<properties>
-									<paragraphText __type="string">&lt;p&gt;Page
-										content..&lt;/p&gt;</paragraphText>
-								</properties>
-							</variant>
-						</node>
-					</node>
-				</node>
-			</node>
-		</nodes>
-	</site>
+ <site name="simsa.ch" state="1" siteResourcesPackageKey="WebExcess.Theme" siteNodeName="theme">
+  <nodes formatVersion="2.0">
+   <node identifier="6337913d-afdb-43de-8735-d0dab19045c8" nodeName="theme">
+    <variant sortingIndex="100" workspace="live" nodeType="WebExcess.BaseTypes:Home" version="3" removed="" hidden="" hiddenInIndex="">
+     <dimensions/>
+     <accessRoles __type="array"/>
+     <creationDateTime __type="object" __classname="DateTime">2017-05-08T13:59:54+00:00</creationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastModificationDateTime>
+     <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastPublicationDateTime>
+     <properties>
+      <title __type="string">Home</title>
+      <uriPathSegment __type="string">home</uriPathSegment>
+      <canonicalLink __type="string"></canonicalLink>
+     </properties>
+    </variant>
+    <node identifier="e5298fd1-7bf9-bd06-9203-49547b6cad17" nodeName="main">
+     <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2017-05-08T13:59:54+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastPublicationDateTime>
+      <properties/>
+     </variant>
+     <node identifier="eb35e03c-83f3-4480-a43b-65ef9ca93bad" nodeName="node-8qf5jrysu6m7r">
+      <variant sortingIndex="150" workspace="live" nodeType="WebExcess.BaseTypes:Paragraph" version="6" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:48+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastPublicationDateTime>
+       <properties>
+        <paragraphText __type="string">&lt;p&gt;.. with Content.&lt;/p&gt;</paragraphText>
+       </properties>
+      </variant>
+      <!--Skipped node with identifier "2c4b9cc6-cfe4-418c-979e-2fb80db133e4" and path "/sites/theme/main/node-ysw3vcsv3i2zs/col1/node-iwk5xz3qakn0p" because of a missing parent path. This is caused by a broken rootline and needs to be fixed with the "node:repair" command.-->
+      <!--Skipped node with identifier "2a9583aa-dd37-4fe5-bf86-551f49db9191" and path "/sites/theme/main/node-ysw3vcsv3i2zs/col2/node-jcklekla4gfs4" because of a missing parent path. This is caused by a broken rootline and needs to be fixed with the "node:repair" command.-->
+      <!--Skipped node with identifier "6ad053e5-ebc1-46ba-8e62-bf654a2ca2a0" and path "/sites/theme/main/node-ysw3vcsv3i2zs/col3/node-llcl7mpq1bhbn" because of a missing parent path. This is caused by a broken rootline and needs to be fixed with the "node:repair" command.-->
+</node>
+     <node identifier="5fe9fabe-a4d7-45b7-9656-975561e5c1e0" nodeName="node-zeyicd910gvyz">
+      <variant sortingIndex="100" workspace="live" nodeType="WebExcess.BaseTypes:Heading" version="4" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:41+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:59+00:00</lastPublicationDateTime>
+       <properties>
+        <headingTagName __type="string">auto</headingTagName>
+        <headingText __type="string">A Home..</headingText>
+       </properties>
+      </variant>
+     </node>
+    </node>
+    <node identifier="ad5a1182-b2e4-4c0b-9d32-3a325715bc86" nodeName="node-2ekzbigloyfve">
+     <variant sortingIndex="200" workspace="live" nodeType="WebExcess.BaseTypes:Page" version="2" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2017-05-08T15:36:51+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">a-page</uriPathSegment>
+       <canonicalLink __type="string"></canonicalLink>
+       <title __type="string">A Page</title>
+      </properties>
+     </variant>
+     <node identifier="8a169a5e-d0a8-7ad7-a6a0-8248f8b83d45" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2017-05-08T15:36:51+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+      <node identifier="9b01c5f3-856e-4d20-877a-6289e4705906" nodeName="node-12ionmdgm7qk2">
+       <variant sortingIndex="150" workspace="live" nodeType="WebExcess.BaseTypes:Paragraph" version="5" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:06+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastPublicationDateTime>
+        <properties>
+         <paragraphText __type="string">&lt;p&gt;.. with Content.&lt;/p&gt;</paragraphText>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="7720ec85-efcf-40d5-842d-5fe711d37e87" nodeName="node-hsx9sv6upazs8">
+       <variant sortingIndex="100" workspace="live" nodeType="WebExcess.BaseTypes:Heading" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2017-05-08T15:36:59+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2017-05-08T15:37:18+00:00</lastPublicationDateTime>
+        <properties>
+         <headingTagName __type="string">auto</headingTagName>
+         <headingText __type="string">A Page..</headingText>
+        </properties>
+       </variant>
+      </node>
+     </node>
+    </node>
+   </node>
+  </nodes>
+ </site>
 </root>

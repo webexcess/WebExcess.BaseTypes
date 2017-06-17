@@ -18,7 +18,7 @@
   abstract: true
   properties:
     imageAsset:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         inlineEditable: false
         inspector:
@@ -32,6 +32,8 @@
     'imageAsset':
       ui:
         label: 'WebExcess.BaseTypes:NodeTypes.Image:properties.imageAsset'
+        help:
+          message: 'WebExcess.BaseTypes:NodeTypes.Image:properties.imageAsset.help'
         reloadIfChanged: true
         inspector:
           group: image

@@ -10,7 +10,7 @@
     position: 10
   childNodes:
     col1: &typeContentCollection
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
     col2: *typeContentCollection
   properties:
     'gridLayout':

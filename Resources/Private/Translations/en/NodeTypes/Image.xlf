@@ -9,7 +9,10 @@
 				<source>Image</source>
 			</trans-unit>
 			<trans-unit id="properties.imageAsset" xml:space="preserve">
-				<source>Asset</source>
+				<source>Responsive Asset</source>
+			</trans-unit>
+			<trans-unit id="properties.imageAsset.help" xml:space="preserve">
+				<source>The Asset is generated automatically as a quarter, half and original size of what you define below. So it's important to multiply the size by two!</source>
 			</trans-unit>
 			<trans-unit id="properties.buttonMode" xml:space="preserve">
 				<source>Mode</source>

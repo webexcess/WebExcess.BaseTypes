@@ -1,12 +1,20 @@
-TYPO3:
+
+WebExcess:
+  BaseTypes:
+    Button:
+      className: btn
+    Image:
+      maxWidth: 2560
+      maxHeight: 1440
+      cropping: false
+      upScaling: false
+Neos:
   Neos:
-    typoScript:
-      autoInclude:
-        'WebExcess.BaseTypes': true
     userInterface:
       translation:
         autoInclude:
-          'WebExcess.BaseTypes': ['NodeTypes/*']
+          WebExcess.BaseTypes:
+            - 'NodeTypes/*'
     nodeTypes:
       groups:
         basetypes:
@@ -22,13 +30,6 @@ TYPO3:
           collapsed: false
         structure:
           collapsed: true
-
-WebExcess:
-  BaseTypes:
-    Button:
-      className: btn
-    Image:
-      maxWidth: 2560
-      maxHeight: 1440
-      cropping: false
-      upScaling: false
+    fusion:
+      autoInclude:
+        WebExcess.BaseTypes: true

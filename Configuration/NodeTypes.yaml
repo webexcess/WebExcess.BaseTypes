@@ -1,35 +1,35 @@
 # basetype-reset
 
-'TYPO3.Neos.NodeTypes:Page':
+'Neos.NodeTypes:Page':
   abstract: true
-'TYPO3.Neos.NodeTypes:Headline':
+'Neos.NodeTypes:Headline':
   abstract: TRUE
-'TYPO3.Neos.NodeTypes:Text':
+'Neos.NodeTypes:Text':
   abstract: TRUE
-'TYPO3.Neos.NodeTypes:Image':
+'Neos.NodeTypes:Image':
   abstract: TRUE
-'TYPO3.Neos.NodeTypes:TextWithImage':
+'Neos.NodeTypes:TextWithImage':
   abstract: TRUE
-'TYPO3.Neos.NodeTypes:TwoColumn':
+'Neos.NodeTypes:TwoColumn':
   abstract: TRUE
-'TYPO3.Neos.NodeTypes:ThreeColumn':
+'Neos.NodeTypes:ThreeColumn':
   abstract: TRUE
-'TYPO3.Neos.NodeTypes:FourColumn':
+'Neos.NodeTypes:FourColumn':
   abstract: TRUE
 
-#'TYPO3.Neos.NodeTypes:Html':
+#'Neos.NodeTypes:Html':
 #  abstract: TRUE
-#'TYPO3.Neos.NodeTypes:Form':
+#'Neos.NodeTypes:Form':
 #  abstract: TRUE
-#'TYPO3.Neos.NodeTypes:AssetList':
+#'Neos.NodeTypes:AssetList':
 #  abstract: TRUE
-#'TYPO3.Neos.NodeTypes:ContentReferences':
+#'Neos.NodeTypes:ContentReferences':
 #  abstract: TRUE
 #'Flowpack.Listable:ListNode':
 #  abstract: TRUE
-#'TYPO3.Neos.NodeTypes:Menu':
+#'Neos.NodeTypes:Menu':
 #  abstract: TRUE
-#'TYPO3.Neos:PluginView':
+#'Neos.Neos:PluginView':
 #  abstract: TRUE
 
 
@@ -39,17 +39,17 @@
   abstract: true
   label: "${String.replace(node.nodeType.name, 'WebExcess.BaseTypes:', '')}"
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
 
 'WebExcess.BaseTypes:Document':
   abstract: true
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   ui:
     label: 'Document'
     icon: 'icon-file'
   constraints:
     nodeTypes:
       'WebExcess.BaseTypes:Document': true
-      'TYPO3.Neos:Shortcut': true
+      'Neos.Neos:Shortcut': true
       'WebExcess.BaseTypes:Home': false

@@ -1,7 +1,7 @@
 # basetype-link
 
 prototype(WebExcess.BaseTypes:LinkObject) >
-prototype(WebExcess.BaseTypes:LinkObject) < prototype(TYPO3.TypoScript:Tag) {
+prototype(WebExcess.BaseTypes:LinkObject) < prototype(Neos.Fusion:Tag) {
 	tagName = 'a'
 
 	node = ${node}
@@ -19,7 +19,7 @@ prototype(WebExcess.BaseTypes:LinkObject) < prototype(TYPO3.TypoScript:Tag) {
 	hrefIsExternal = ${String.indexOf(this.href, 'http') == 0 ? true : false}
 	@override.hrefIsExternal = ${this.hrefIsExternal}
 
-	attributes.class = TYPO3.TypoScript:RawArray {
+	attributes.class = Neos.Fusion:RawArray {
 		link  = 'link'
 		isExternal = ${hrefIsExternal ? 'url-is-external' : null}
 	}

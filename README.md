@@ -69,4 +69,4 @@ BaseTypes is replacing and extending existing [Neos NodeTypes](https://github.co
    [David Wheeler](https://de.wikipedia.org/wiki/David_Wheeler)
 
 
-by [webexcess GmbH](http://webexcess.ch/)
+by [webexcess GmbH](https://webexcess.ch/)
