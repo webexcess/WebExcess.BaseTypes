@@ -17,8 +17,17 @@
 			<trans-unit id="groups.grid" xml:space="preserve">
 				<source>Grid</source>
 			</trans-unit>
-			<trans-unit id="properties.gridLayout" xml:space="preserve">
-				<source>Layout</source>
+			<trans-unit id="properties.gridLayoutSM" xml:space="preserve">
+				<source>Smartphone landscape (≥576px)</source>
+			</trans-unit>
+			<trans-unit id="properties.gridLayoutMD" xml:space="preserve">
+				<source>Tablet (≥768px)</source>
+			</trans-unit>
+			<trans-unit id="properties.gridLayoutLG" xml:space="preserve">
+				<source>Tablet landscape (≥992px)</source>
+			</trans-unit>
+			<trans-unit id="properties.gridLayoutXL" xml:space="preserve">
+				<source>Desktops (≥1200px)</source>
 			</trans-unit>
 		</body>
 	</file>

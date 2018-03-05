@@ -2,59 +2,35 @@
 
 prototype(WebExcess.BaseTypes:GridObject) >
 prototype(WebExcess.BaseTypes:GridObject) < prototype(WebExcess.BaseTypes:Content) {
-	grid = ${q(node).property('gridLayout')}
-	@context.grid = ${this.grid}
-	cols = ${String.split(this.grid, '-')}
-	@context.cols = ${this.cols}
-
-	xsGrid = '12-12-12-12'
-	xsGrid.@process.10 = ${this.grid == '3-3-3-3' ? '6-6-6-6' : value}
-	xsGrid.@process.20 = ${this.grid == '6-3-3' ? '12-6-6' : value}
-	@context.xsGrid = ${this.xsGrid}
-	xsCols = ${String.split(this.xsGrid, '-')}
-	@context.xsCols = ${this.xsCols}
+    @context {
+        layoutSM = ${q(node).property('gridLayoutSM')}
+        layoutMD = ${q(node).property('gridLayoutMD')}
+        layoutLG = ${q(node).property('gridLayoutLG')}
+        layoutXL = ${q(node).property('gridLayoutXL')}
+        cols = ${q(node).children('[instanceof Neos.Neos:ContentCollection]').get()}
+    }
 
 	attributes.class = Neos.Fusion:RawArray {
-		isBackend = ${!isLive ? 'neos-contentelement' : ''}
-		grid = ${'grid-' + grid}
-
-		row = 'basetype-grid row'
-		row.@if.multipleExists = ${Array.length(cols) >= 2}
-
-		nodeTypeName = 'basetype-grid'
-		nodeTypeName.@if.onlyOneExists = ${Array.length(cols) == 1}
+        nodeTypeName = 'basetype-grid'
+        row = ${q(cols).count() >= 2 ? 'row' : false}
 	}
 
-	content = Neos.Fusion:Array {
-		col = Neos.Neos:ContentCollection {
-			nodePath = 'col1'
-			@if.onlyOneExists = ${Array.length(cols) == 1}
-		}
-		col1 = Neos.Fusion:Tag {
-			attributes.class = ${'column col-sm-' + cols[0] + ' col-xs-' + xsCols[0]}
-			content = Neos.Neos:ContentCollection
-			content.nodePath = 'col1'
-			@if.multipleExists = ${Array.length(cols) >= 2}
-		}
-		col2 = Neos.Fusion:Tag {
-			attributes.class = ${'column col-sm-' + cols[1] + ' col-xs-' + xsCols[1]}
-			content = Neos.Neos:ContentCollection
-			content.nodePath = 'col2'
-			@if.multipleExists = ${Array.length(cols) >= 2}
-		}
-		col3 = Neos.Fusion:Tag {
-			attributes.class = ${'column col-sm-' + cols[2] + ' col-xs-' + xsCols[2]}
-			content = Neos.Neos:ContentCollection
-			content.nodePath = 'col3'
-			@if.multipleExists = ${Array.length(cols) >= 3}
-		}
-		col4 = Neos.Fusion:Tag {
-			attributes.class = ${'column col-sm-' + cols[3] + ' col-xs-' + xsCols[3]}
-			content = Neos.Neos:ContentCollection
-			content.nodePath = 'col4'
-			@if.multipleExists = ${Array.length(cols) >= 4}
-		}
-	}
+    content = Neos.Fusion:Collection {
+        collection = ${cols}
+        itemName = 'node'
+        iterationName = 'iteration'
+        itemRenderer = WebExcess.BaseTypes:GridObject.ContentCollection
+    }
+}
 
-	@process.contentElementWrapping.renderCurrentDocumentMetadata = true
+prototype(WebExcess.BaseTypes:GridObject.ContentCollection) < prototype(Neos.Fusion:Tag) {
+    attributes.class = Neos.Fusion:RawArray {
+        column = 'column'
+        xs = 'col-xs-12'
+        sm = ${layoutSM ? 'col-sm-' + String.split(layoutSM, '-')[iteration.index] : false}
+        md = ${layoutMD ? 'col-md-' + String.split(layoutMD, '-')[iteration.index] : false}
+        lg = ${layoutLG ? 'col-lg-' + String.split(layoutLG, '-')[iteration.index] : false}
+        xl = ${layoutXL ? 'col-xl-' + String.split(layoutXL, '-')[iteration.index] : false}
+    }
+    content = Neos.Neos:ContentCollection
 }

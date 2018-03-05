@@ -12,33 +12,65 @@
           label: 'WebExcess.BaseTypes:NodeTypes.Grid:groups.grid'
           icon: 'icon-columns'
 
-'WebExcess.BaseTypes:Grid.properties.gridLayout':
+'WebExcess.BaseTypes:Grid.properties.gridLayoutSM--inspector':
   abstract: true
   properties:
-    gridLayout:
+    gridLayoutSM:
       type: string
-      defaultValue: '12'
       ui:
-        inlineEditable: false
-        inspector:
-          group: hidden
-
-'WebExcess.BaseTypes:Grid.properties.gridLayout--inspector':
-  abstract: true
-  superTypes:
-    'WebExcess.BaseTypes:Grid.properties.gridLayout': true
-  properties:
-    'gridLayout':
-      ui:
-        label: 'WebExcess.BaseTypes:NodeTypes.Grid:properties.gridLayout'
+        label: 'WebExcess.BaseTypes:NodeTypes.Grid:properties.gridLayoutSM'
         reloadIfChanged: true
         inspector:
           group: 'grid'
+          position: 10
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
-            values:
-              '12':
-                label: '100%'
+            allowEmpty: true
+
+'WebExcess.BaseTypes:Grid.properties.gridLayoutMD--inspector':
+  abstract: true
+  properties:
+    gridLayoutMD:
+      type: string
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Grid:properties.gridLayoutMD'
+        reloadIfChanged: true
+        inspector:
+          group: 'grid'
+          position: 20
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+
+'WebExcess.BaseTypes:Grid.properties.gridLayoutLG--inspector':
+  abstract: true
+  properties:
+    gridLayoutLG:
+      type: string
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Grid:properties.gridLayoutLG'
+        reloadIfChanged: true
+        inspector:
+          group: 'grid'
+          position: 30
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+
+'WebExcess.BaseTypes:Grid.properties.gridLayoutXL--inspector':
+  abstract: true
+  properties:
+    gridLayoutXL:
+      type: string
+      ui:
+        label: 'WebExcess.BaseTypes:NodeTypes.Grid:properties.gridLayoutXL'
+        reloadIfChanged: true
+        inspector:
+          group: 'grid'
+          position: 40
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
 
 #'WebExcess.BaseTypes:Grid.properties.gridLayout--inplace':
 #  abstract: true

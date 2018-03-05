@@ -4,7 +4,10 @@
   superTypes:
     'WebExcess.BaseTypes:Content': true
     'WebExcess.BaseTypes:Grid.ui': true
-    'WebExcess.BaseTypes:Grid.properties.gridLayout--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutSM--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutMD--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutLG--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutXL--inspector': true
   ui:
     label: 'WebExcess.BaseTypes:NodeTypes.Grid:ui.label.2'
     position: 10
@@ -13,25 +16,76 @@
       type: 'Neos.Neos:ContentCollection'
     col2: *typeContentCollection
   properties:
-    'gridLayout':
+    gridLayoutSM:
       defaultValue: '6-6'
       ui:
         inspector:
           editorOptions:
             values:
-              '12': ~
-              '6-6':
-                label: '50% / 50%'
-              '8-4':
-                label: '66% / 33%'
-              '4-8':
-                label: '33% / 66%'
+              3-9:
+                label: '25% | 75%'
+              4-8:
+                label: '33% | 66%'
+              6-6:
+                label: '50% | 50%'
+              8-4:
+                label: '66% | 33%'
+              9-3:
+                label: '75% | 25%'
+    gridLayoutMD:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              3-9:
+                label: '25% | 75%'
+              4-8:
+                label: '33% | 66%'
+              6-6:
+                label: '50% | 50%'
+              8-4:
+                label: '66% | 33%'
+              9-3:
+                label: '75% | 25%'
+    gridLayoutLG:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              3-9:
+                label: '25% | 75%'
+              4-8:
+                label: '33% | 66%'
+              6-6:
+                label: '50% | 50%'
+              8-4:
+                label: '66% | 33%'
+              9-3:
+                label: '75% | 25%'
+    gridLayoutXL:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              3-9:
+                label: '25% | 75%'
+              4-8:
+                label: '33% | 66%'
+              6-6:
+                label: '50% | 50%'
+              8-4:
+                label: '66% | 33%'
+              9-3:
+                label: '75% | 25%'
 
 'WebExcess.BaseTypes:3Grid':
   superTypes:
     'WebExcess.BaseTypes:Content': true
     'WebExcess.BaseTypes:Grid.ui': true
-    'WebExcess.BaseTypes:Grid.properties.gridLayout--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutSM--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutMD--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutLG--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutXL--inspector': true
   ui:
     label: 'WebExcess.BaseTypes:NodeTypes.Grid:ui.label.3'
     position: 20
@@ -40,25 +94,84 @@
     col2: *typeContentCollection
     col3: *typeContentCollection
   properties:
-    'gridLayout':
+    gridLayoutSM:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              4-4-4:
+                label: '33% | 33% | 33%'
+              6-3-3:
+                label: '66% | 33% | 33%'
+              3-6-3:
+                label: '33% | 66% | 33%'
+              3-3-6:
+                label: '33% | 33% | 66%'
+              12-6-6:
+                label: '100% | 50% | 50%'
+              6-6-12:
+                label: '50% | 50% | 100%'
+    gridLayoutMD:
       defaultValue: '4-4-4'
       ui:
         inspector:
           editorOptions:
             values:
-              '12': ~
-              '4-4-4':
-                label: '33% / 33% / 33%'
-              '3-6-3':
-                label: '25% / 50% / 25%'
-              '6-3-3':
-                label: '50% / 25% / 25%'
+              4-4-4:
+                label: '33% | 33% | 33%'
+              6-3-3:
+                label: '66% | 33% | 33%'
+              3-6-3:
+                label: '33% | 66% | 33%'
+              3-3-6:
+                label: '33% | 33% | 66%'
+              12-6-6:
+                label: '100% | 50% | 50%'
+              6-6-12:
+                label: '50% | 50% | 100%'
+    gridLayoutLG:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              4-4-4:
+                label: '33% | 33% | 33%'
+              6-3-3:
+                label: '66% | 33% | 33%'
+              3-6-3:
+                label: '33% | 66% | 33%'
+              3-3-6:
+                label: '33% | 33% | 66%'
+              12-6-6:
+                label: '100% | 50% | 50%'
+              6-6-12:
+                label: '50% | 50% | 100%'
+    gridLayoutXL:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              4-4-4:
+                label: '33% | 33% | 33%'
+              6-3-3:
+                label: '66% | 33% | 33%'
+              3-6-3:
+                label: '33% | 66% | 33%'
+              3-3-6:
+                label: '33% | 33% | 66%'
+              12-6-6:
+                label: '100% | 50% | 50%'
+              6-6-12:
+                label: '50% | 50% | 100%'
 
 'WebExcess.BaseTypes:4Grid':
   superTypes:
     'WebExcess.BaseTypes:Content': true
     'WebExcess.BaseTypes:Grid.ui': true
-    'WebExcess.BaseTypes:Grid.properties.gridLayout': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutSM--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutMD--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutLG--inspector': true
+    'WebExcess.BaseTypes:Grid.properties.gridLayoutXL--inspector': true
   ui:
     label: 'WebExcess.BaseTypes:NodeTypes.Grid:ui.label.4'
     position: 30
@@ -68,5 +181,40 @@
     col3: *typeContentCollection
     col4: *typeContentCollection
   properties:
-    'gridLayout':
+    gridLayoutSM:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              3-3-3-3:
+                label: '25% | 253% | 25% | 25%'
+              6-6-6-6:
+                label: '50% | 50% || 50% | 50%'
+    gridLayoutMD:
       defaultValue: '3-3-3-3'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              3-3-3-3:
+                label: '25% | 253% | 25% | 25%'
+              6-6-6-6:
+                label: '50% | 50% || 50% | 50%'
+    gridLayoutLG:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              3-3-3-3:
+                label: '25% | 253% | 25% | 25%'
+              6-6-6-6:
+                label: '50% | 50% || 50% | 50%'
+    gridLayoutXL:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              3-3-3-3:
+                label: '25% | 253% | 25% | 25%'
+              6-6-6-6:
+                label: '50% | 50% || 50% | 50%'
